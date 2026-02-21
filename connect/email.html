@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Email</title>
+    </head>
+    
+    <body>
+        <h1>Email</h1>
+        <p id="code">Code</p>
+        <p id="cMDP">cMDP</p>
+        
+    </body>
+<script>
+    async function hacherCode(code) {
+        // Vérifie que le code est bien un nombre à 4 chiffres
+        if (!/^\d{4}$/.test(code)) {
+            throw new Error("Le code doit être un nombre à 4 chiffres.");
+        }
+        
+        // Encode le code en bytes
+        const encoder = new TextEncoder();
+        const data = encoder.encode(code);
+        
+        // Hache le code avec l'API Web Crypto (SHA-256)
+        const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+        
+        // Convertit le hachage en une chaîne hexadécimale
+        const hashArray = Array.from(new Uint8Array(hashBuffer));
+        const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+        
+        return hashHex;
+    }
+    
+    function aléa() {
+        var a = Math.floor(Math.random()*9+0);
+        var b = Math.floor(Math.random()*9+0);
+        var c = Math.floor(Math.random()*9+0);
+        var d = Math.floor(Math.random()*9+0);
+        var e = Math.floor(Math.random()*9+0);
+        var f = Math.floor(Math.random()*9+0);
+        const tableau = [a, b, c, d].join("");
+        return[tableau]
+    }
+      
+    var MDP = aléa();
+
+    var cMDP = hacherCode("1234");
+
+    document.getElementById("cMDP").innerHTML = cMDP;
+    
+    document.getElementById("code").innerHTML = MDP;
+    
+    localStorage.getItem("x", MDP);
+    
+    </script>
+</html>

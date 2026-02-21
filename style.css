@@ -1,0 +1,188 @@
+body {
+    background-color: #333333;
+    font-family: "oxanium", sans-serif;
+    color: white;
+}
+
+h1 {
+    font-family: "Alfarn", normal;
+    font-size: 5em;
+    text-align: center;
+    text-shadow: 6px 6px 0px black;
+}
+
+h2 {
+    font-family: "Alfarn", normal;
+    font-size: 2em;
+    text-shadow: 5px 5px 0px black;
+    text-align: center;
+}
+
+h3 {
+    font-family: "Alfarn", normal;
+    font-size: 1em;
+    text-shadow: 3px 3px 0px rgba(0, 0, 0, 0);
+    text-align: center;
+}
+
+.nav2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  z-index: 10;
+}
+
+.nav-main {
+    position: fixed;
+    top: 50px;
+    left: 0;
+    right: 0;
+    background-color: #191919;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 10px 20px;
+}
+
+.langue {
+    margin-right: auto;
+}
+
+.search {
+    width: 190px; /* ≈ 5cm */
+    padding: 6px;
+    transition: all 0.3s ease;
+}
+
+.search:hover {
+    width: 300px;
+}
+
+.login {
+    margin-left: auto;
+    padding: 6px 15px;
+}
+
+
+
+footer {
+    background-color: black;
+    padding: 10px;
+    border: 8px solid rgba(255, 255, 255, 0);
+    border-radius: 5px;
+    text-align: center;
+}
+
+nav-main-button {
+    background-color: rgb(255, 38, 0);
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-right: 2%;
+    margin-left: 2%;
+}
+
+nav-main-button2 {
+    background-color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-right: 1%;
+    margin-left: 75%;
+}
+
+.section {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    
+}
+
+.box {
+    border: 2px solid white;
+    border-radius: 10px;
+    margin: 5px;
+    cursor: pointer;
+    padding-bottom: 0px;
+}
+
+.img {
+    display: block;
+    border-radius: 10px;
+    margin: auto auto;
+    object-fit: cover;
+    object-position: 20% 10%;
+    width: 90%;
+    height: 70%;
+}
+
+.user {
+    font-size: 20px;
+    padding-left: 10%;
+}
+
+.cropped {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  object-position: 20% 10%;
+  border: 5px solid black;
+}
+
+.modelname {
+    text-align: center;
+}
+
+.bouton {
+    display: block;
+    margin: auto auto;
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: rgb(255, 0, 0);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.col_bt {
+    display: grid;
+    grid-template-columns: 50% 25% 25%; 
+}
+
+.likes_count {
+    padding-top: 20%;
+}
+
+.section_models {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+. {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.connecter-content {
+    background: white;
+    color: black;
+    padding: 30px;
+    border-radius: 10px;
+    width: 300px;
+}
+

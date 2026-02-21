@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+<style>
+/* style de la barre nav */
+nav {
+  display: flex;
+  align-items: center;
+  background-color: black;
+}
+nav p {
+  color: white;
+}
+.zone_fichier {
+  background-color: aqua;
+  margin: 5px;
+  padding: 5px;
+}
+.modeles {
+  background-color: aquamarine;
+  display: flex;
+}
+</style>
+</head>
+<body>
+    <!-- debut barre de navigation-->
+  <nav>
+    <p id='arkeo'></p>
+    <input type="text">
+    <p id='web'></p>
+    <button id='compte'></button>
+  </nav>
+  <!-- fin barre de navigation -->
+  <!-- header -->
+  <section class='zone_fichier'>
+    <div class='mes_fichier'>
+     <input type="file" id="file" accept="image/*" multiple>
+    </div>
+  </section>
+  <!-- header -->
+  <section class="modeles">
+    <div id='output'></div>
+  </section>
+
+<script>
+p = document.getElementById('arkeo')
+p2 = document.getElementById('web')
+button= document.getElementById('compte') 
+p.textContent = 'ARKRO'
+p2.textContent = 'WEB'
+button.textContent = 'compte'
+// ici cest le code 
+let fichier = document.getElementById('file');
+let zone = document.getElementById('output');
+
+fichier.addEventListener('change', function() {
+
+    for (let i = 0; i < fichier.files.length; i++) {
+
+        let file = fichier.files[i];
+
+        let section = document.createElement('section');
+        let img = document.createElement('img');
+
+        img.src = URL.createObjectURL(file);
+        img.style.width = '150px';
+        img.style.display = 'block';
+
+        section.style.border = '1px solid #ccc';
+        section.style.padding = '5px';
+        section.style.margin = '5px';
+
+        section.appendChild(img);
+        zone.appendChild(section);
+    }
+});
+
+
+</script>
+</body>
+</html>

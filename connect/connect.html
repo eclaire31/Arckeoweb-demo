@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Teste de connexion</title>
+    </head>
+    <body>
+        <h1>Connexion</h1>
+        <button id="connexion">Connexion</button>
+
+        <form id="Connect">
+            <br>
+            <input id="uMDP">
+            <br/>
+            <input id="verify" type="button" value="Se connecter">
+            <br>
+        </form>
+        <p id="x">MDP</p>
+
+    </body>
+        <script>
+            document.getElementById("Connect").style.visibility = "hidden";
+            var uMDP = document.getElementById("uMDP").value;
+            
+            function ouvrirFenetre(url) {
+                var win = window.open(url, "popup", "toolbar=0, location=0, directories=0, status=0, scrollbars=0, resizable=0, copyhistory=0, width=500, height=350, screenX=200, screenY=200");
+                win.focus();
+            }
+            document.geyt
+            document.getElementById("connexion").addEventListener("click", () => {
+                ouvrirFenetre("email.html");
+                document.getElementById("Connect").style.visibility = "visible";
+            });
+            
+            document.getElementById("verify").addEventListener("click", () => {
+                var uMDP = document.getElementById("uMDP").value;
+                var verif = localStorage.getItem('x');
+                if(verif === uMDP) {
+                    alert("✅Mot de Passe bon");
+                }
+                else {
+                    alert("⛔Mot de Passe mauvais");
+                }
+            });
+            var x = localStorage.getItem("x");
+            document.getElementById("x").innerHTML = x;
+    </script>
+</html>
